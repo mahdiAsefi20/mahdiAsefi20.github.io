@@ -109,7 +109,7 @@ const socials = [
   { icon: Github, href: "https://github.com/mahdiAsefi20", label: "GitHub" },
   { icon: Linkedin, href: "https://www.linkedin.com/in/mahdiasefi", label: "LinkedIn" },
   { icon: Mail, href: "mailto:asefi.mahdii@gmail.com", label: "Email" },
-  { icon: Send, href: "https://t.me/mahdiAsefi20", label: "Telegram" },
+  { icon: Send, href: "https://t.me/mahdiAsefi", label: "Telegram" },
 ];
 
 const roles = [
@@ -121,10 +121,9 @@ const roles = [
 
 const skills = [
   { category: "Languages", icon: Code2, items: [
-    { name: "Python", tip: "Primary language · 6+ years" },
+    { name: "Python", tip: "Primary language · 4+ years" },
     { name: "C++", tip: "Systems programming" },
-    { name: "C#", tip: ".NET development" },
-    { name: "Java", tip: "Enterprise applications" },
+    { name: "C#", tip: "Unity game engine" },,
   ]},
   { category: "Deep Learning", icon: Cpu, items: [
     { name: "PyTorch", tip: "Primary DL framework" },
@@ -149,10 +148,10 @@ const skills = [
 
 const experiences = [
   {
-    role: "AI Engineer",
+    role: "Full-Stack AI Engineer",
     company: "Metadeep",
     location: "Karaj, Alborz",
-    period: "Jan 2026 – Present",
+    period: "Feb 2026 – Present",
     highlights: [
       "Architected a multi-model AI pipeline integrating video generation APIs with a model-agnostic orchestration layer.",
       "Built a Vision LLM engine to extract visual properties and auto-generate structured creative briefs.",
@@ -271,10 +270,10 @@ const teaching = {
 
 const testimonials = [
   {
-    quote: "Mahdi is one of the most talented AI engineers I've worked with. His ability to translate complex research into production systems is exceptional.",
+    quote: "Mahdi is an exceptionally talented researcher whose work on deepfake detection stood out for its depth and precision. His ability to implement complex papers from scratch using Python and PyTorch is truly impressive — a skill that sets him apart from his peers.",
     name: "Dr. Azadeh Mansouri",
     title: "Thesis Supervisor",
-    company: "Azad University",
+    company: "Kharazmi University",
     avatar: "AM",
   },
   {
@@ -900,7 +899,7 @@ export default function Home() {
                 <motion.div variants={fadeUp} custom={5} className="mt-6 flex flex-wrap items-center gap-3">
                   <div className="glass rounded-full px-4 py-2 flex items-center gap-2 text-[12px] text-slate-400">
                     <Briefcase size={13} className="text-teal-400" />
-                    <span>5+ Years</span>
+                    <span>4+ Years</span>
                   </div>
                   <div className="glass rounded-full px-4 py-2 flex items-center gap-2 text-[12px] text-slate-400">
                     <FlaskConical size={13} className="text-teal-400" />
@@ -925,7 +924,7 @@ export default function Home() {
                   </a>
                   <span className="flex items-center gap-2 min-h-[44px]">
                     <MapPin size={13} strokeWidth={1.5} />
-                    Alborz, Iran
+                    Tehran, Iran
                   </span>
                   <div className="flex items-center gap-3 ml-auto">
                     {socials.map(({ icon: Icon, href, label }) => (
@@ -1164,7 +1163,7 @@ export default function Home() {
                       </div>
                       <div>
                         <p className="text-[11px] text-slate-500 uppercase tracking-wider font-medium">Location</p>
-                        <p className="text-[13px] text-slate-300">Alborz, Iran</p>
+                        <p className="text-[13px] text-slate-300">Tehran, Iran</p>
                       </div>
                     </div>
                   </div>

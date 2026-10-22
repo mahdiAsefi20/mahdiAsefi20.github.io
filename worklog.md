@@ -639,3 +639,49 @@ Stage Summary:
 3. **P2**: Add OG image for social sharing
 4. **P3**: Add blog/publications section
 5. **P3**: Add loading skeleton states
+
+---
+
+Task ID: 11
+Agent: Main
+Task: Website redesign — look, hierarchy, and evidence-first content (ui-ux-pro-max)
+
+Work Log:
+- Ran the ui-ux-pro-max design-system generator for a developer/AI portfolio; persisted the result to design-system/mahdi-asefi-portfolio/MASTER.md, then rewrote it to match the tokens actually shipped
+- Rewrote src/app/globals.css as a token system: strict modular type scale (11/12/14/16/18/24/32/44/60), semantic colour tokens, hairline surfaces, aurora + grid backdrop, reveal and caret primitives, a full prefers-reduced-motion block, and print styles
+- Split the 1272-line page.tsx into src/components/portfolio/* (content, motion, ui, nav, hero, position, experience, work, skills, education, research, contact, footer, scroll-top); page.tsx is now a server component
+- Rebuilt the page as a calm-and-precise editorial layout: hero with verified metric strip, Position as three domain cards with an evidence footnote, Experience as a vertical rail, Open Source Work as a terminal frame over the real repositories, Skills as masonry category cards, Education, Research + Teaching, and a split contact section
+- Added the Open Source Work section listing RFAMxCORE, RFAM, miniBERT, metadeep_task, Persian-Paraphraser and the genetic/PSO project, each with a real link, language and file list
+- Removed the testimonials section (two of three quotes were unverified placeholders), the random-width skill proficiency bars (Vanity Metrics), the GPA bars, the floating particles, the cursor glow and the floating section-dot rail
+- Removed every unconfirmed claim and stale value: the retracted 99% detection accuracy, 4 / 4 and 3.4 / 4 GPAs, the "Academic research and publications" subtitle, the June 2025 footer date, C++/C#/Unity/FastAPI/MongoDB/PyTorch Lightning, the Tetronix Jan 2026 end date, and the "HeyGent" typo
+- Replaced the impossible POST /api/contact form with a mailto composer that validates inline, shows a linked error summary, and states plainly that the site is statically hosted
+- Wired the previously dead "Download CV" button to public/Mahdi Asefi CV.pdf
+- Added public/og.png (1200x630 share card generated from the site's own visual language), public/sitemap.xml, a sitemap line in obots.txt, and full Open Graph / Twitter metadata
+- Fixed two latent bugs found by measurement, not by eye:
+  - A theme colour named ase made Tailwind resolve every 	ext-base (font size) as a *colour* utility, rendering the hero paragraph in the background colour. Renamed the token to canvas.
+  - 
+ext/font variables were applied to <body>, but --font-sans references ar(--font-inter) from :root, so the substitution failed and neither Inter nor JetBrains Mono ever loaded. Moved the variables to <html>.
+- Gated the scroll-reveal opacity: 0 behind an html.js class set by an inline script, so the content stays visible when JavaScript does not run
+- Added automated QA over the built static export via the Chrome DevTools Protocol: contrast audit, pointer-target audit, heading order, alt text, overflow check, and full-page screenshots at 1440px and 390px
+
+QA Results:
+- Contrast failures: 0 (was 8 decorative separators, now rendered as shapes so they are exempt)
+- Pointer targets under 24x24: 0 (was 16; one inline link remains, exempt under WCAG 2.5.8)
+- Horizontal overflow: none at 1440px or 390px
+- Heading order: one h1, h2 per section; zero images without alt; zero links without an accessible name
+- TypeScript: clean; 
+ext build static export succeeds
+- Screenshots reviewed at 1440x1000 and 390x844 (mobile menu, hero, every section, footer)
+
+Stage Summary:
+- Website redesigned around hierarchy and evidence rather than decoration: one motion per view, a strict type scale, and a distinct surface treatment per section
+- The strongest credibility change is structural — the site now shows the code instead of claiming it
+- Zero measured contrast failures, zero undersized pointer targets, no overflow, no horizontal scroll
+
+### Addendum (same task)
+
+- The typewriter stalled after its first word: the word index was advanced inside a ref, so no re-render happened and the effect never re-ran. Moved the index into state so the effect re-triggers. Verified by sampling the rendered text over 28s — it now cycles LLM Systems -> Computer Vision -> Generative AI.
+- Added scripts/generate-og.mjs (
+pm run generate:og) so the share card can be regenerated when the copy changes, instead of being a one-off binary.
+- Footer credit corrected: the site no longer uses Framer Motion.
+- QA tooling (Chrome DevTools Protocol harness) was removed after the audit; the OG generator was kept as a project script.

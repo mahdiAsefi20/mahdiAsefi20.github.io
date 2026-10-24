@@ -685,3 +685,10 @@ Stage Summary:
 pm run generate:og) so the share card can be regenerated when the copy changes, instead of being a one-off binary.
 - Footer credit corrected: the site no longer uses Framer Motion.
 - QA tooling (Chrome DevTools Protocol harness) was removed after the audit; the OG generator was kept as a project script.
+
+### CV v2 — readability + ATS hardening (2026-10-24)
+
+- Replaced public/Mahdi Asefi CV.pdf with the rebuilt CV: muted deep-teal palette (same hue family as the site accent, desaturated for print), 9.5pt body, all 31 bullets rewritten to exactly one line each, justified paragraphs, darker meta gray for WCAG headroom
+- content.ts: fixed the two seasonal dates (Spring 2019 -> Feb - May 2019, Winter 2023 -> Jan - Mar 2023) — seasons break tenure math in Workday/Greenhouse/iCIMS. facts.md, cv/cv.md and questions.md updated to match
+- Source pipeline lives outside this repo (../cv/ + ../readability-research.md, 36 cited sources); this repo only carries the built PDF and the period labels
+- cvPath unchanged ("/Mahdi%20Asefi%20CV.pdf") — Download CV buttons in nav, hero and footer serve the new file

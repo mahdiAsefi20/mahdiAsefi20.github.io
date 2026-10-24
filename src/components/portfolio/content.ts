@@ -378,7 +378,7 @@ export const research: ResearchItem[] = [
   },
   {
     title: "GANs in Radiogenomics",
-    period: "Winter 2023",
+    period: "Jan – Mar 2023",
     supervisor: "Prof. Qian Liu",
     description:
       "Studied GAN-based synthetic data generation for breast-cancer detection, investigating how MRI imagery and genomic information can be fused into a unified generation network.",
@@ -398,7 +398,7 @@ export const teaching = {
   role: "Teaching Assistant",
   course: "Fundamentals of Computer and Programming",
   school: "University of Kashan",
-  period: "Spring 2019",
+  period: "Feb – May 2019",
   supervisor: "Prof. Mahsa Soheil Shamaee",
   highlights: [
     "Designed assignments that strengthened students' grasp of programming fundamentals.",

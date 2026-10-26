@@ -40,13 +40,17 @@ export function Work() {
 
             {/* Repository grid */}
             <div className="grid gap-px bg-line md:grid-cols-2">
-              {repositories.map((repo) => (
+              {repositories.map((repo, index) => (
                 <a
                   key={repo.name}
                   href={repo.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="group relative flex flex-col bg-canvas-2/70 p-6 transition-colors duration-200 hover:bg-elevated/80 sm:p-7"
+                  className={`group relative flex flex-col bg-canvas-2/70 p-6 transition-colors duration-200 hover:bg-elevated/80 sm:p-7 ${
+                    repositories.length % 2 === 1 && index === repositories.length - 1
+                      ? "md:col-span-2"
+                      : ""
+                  }`}
                 >
                   {repo.featured && (
                     <span

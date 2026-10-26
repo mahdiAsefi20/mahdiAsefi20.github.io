@@ -172,7 +172,7 @@ export function Hero() {
                 className="inline-block h-1 w-1 rounded-full bg-line-strong align-middle"
                 aria-hidden="true"
               />
-              <span>Remote-friendly</span>
+              <span>Open to remote roles</span>
             </div>
           </div>
 

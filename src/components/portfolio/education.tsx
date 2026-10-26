@@ -11,7 +11,7 @@ export function Education() {
           <SectionHeading
             index="05"
             title="Education"
-            kicker="M.Sc. in progress, B.Sc. with distinction"
+            kicker="M.Sc. in progress · B.Sc. completed"
             icon={GraduationCap}
           />
         </Reveal>

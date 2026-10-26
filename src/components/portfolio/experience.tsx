@@ -11,7 +11,7 @@ export function Experience() {
           <SectionHeading
             index="02"
             title="Experience"
-            kicker="Five roles across four years, shipping and scaling"
+            kicker="Professional experience"
             icon={Briefcase}
           />
         </Reveal>

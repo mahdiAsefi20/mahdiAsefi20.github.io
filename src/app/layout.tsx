@@ -47,7 +47,7 @@ export const metadata: Metadata = {
     siteName: "Mahdi Asefi",
     title: "Mahdi Asefi — AI Engineer",
     description:
-      "LLM Systems, Computer Vision & Generative AI. 4+ years shipping production AI systems. Inspectable code, not just claims.",
+      "LLM Systems, Computer Vision & Generative AI. 4+ years shipping production AI systems.",
     images: [
       {
         url: "/og.png",

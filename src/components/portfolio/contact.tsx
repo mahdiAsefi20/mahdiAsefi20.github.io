@@ -70,7 +70,7 @@ export function Contact() {
           <SectionHeading
             index="07"
             title="Contact"
-            kicker="Open to new roles, research collaborations, and interesting problems"
+            kicker="Open to new roles and collaborations"
             icon={Mail}
           />
         </Reveal>
@@ -80,12 +80,12 @@ export function Contact() {
           <Reveal className="lg:col-span-5">
             <div className="lg:sticky lg:top-24">
               <h3 className="text-2xl font-semibold leading-tight tracking-[-0.02em] text-ink sm:text-3xl">
-                Tell me what you are building
+                Get in touch
                 <span className="text-accent">.</span>
               </h3>
               <p className="mt-4 max-w-md text-sm leading-relaxed text-ink-2">
-                I read everything that comes in and reply to anything about AI engineering work. If you
-                are building with LLMs, computer vision or generative media, I would like to hear about it.
+                I'm open to AI engineering roles and collaborations.
+                
               </p>
 
               <ul className="mt-8 divide-y divide-line border-y border-line">

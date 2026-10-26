@@ -36,13 +36,13 @@ export const navLinks = [
 ] as const;
 
 export const sectionMeta = [
-  { id: "position", index: "01", title: "Position", kicker: "What I do" },
-  { id: "experience", index: "02", title: "Experience", kicker: "Where I have shipped" },
-  { id: "work", index: "03", title: "Open Source Work", kicker: "Inspectable, not described" },
-  { id: "skills", index: "04", title: "Skills & Stack", kicker: "Confirmed and interviewable" },
+  { id: "position", index: "01", title: "Position", kicker: "Three domains of practice" },
+  { id: "experience", index: "02", title: "Experience", kicker: "Professional experience" },
+  { id: "work", index: "03", title: "Open Source Work", kicker: "Public repositories" },
+  { id: "skills", index: "04", title: "Skills & Stack", kicker: "Technical skills" },
   { id: "education", index: "05", title: "Education", kicker: "Academic background" },
   { id: "research", index: "06", title: "Research", kicker: "In progress, supervised" },
-  { id: "contact", index: "07", title: "Contact", kicker: "Open to opportunities" },
+  { id: "contact", index: "07", title: "Contact", kicker: "Open to new roles" },
 ] as const;
 
 /* ─── Hero ─── */
@@ -53,7 +53,7 @@ export const heroStats = [
   { value: "4+", label: "Years in AI/ML engineering" },
   { value: "3", label: "AI products shipped" },
   { value: "7+", label: "Models in production" },
-  { value: "2", label: "Papers reimplemented from scratch" },
+  { value: "2", label: "Published methods reimplemented from scratch" },
 ] as const;
 
 /* ─── Position (the three Domains) ─── */
@@ -113,7 +113,7 @@ export const experiences: Experience[] = [
     location: "Remote (Canada)",
     period: "Sep 2025 – Dec 2025",
     highlights: [
-      "Reduced summarisation memory consumption by roughly 30%, cutting context and token usage across the pipeline.",
+      "Reduced summarization memory consumption by roughly 30%, cutting context and token usage across the pipeline.",
       "Implemented similarity-based vehicle retrieval and an AI chatbot backed by Redis conversational memory.",
       "Designed the ingestion pipeline for a car-marketplace data aggregation service and integrated real-time voice interaction via ElevenLabs.",
     ],
@@ -148,8 +148,8 @@ export const experiences: Experience[] = [
     location: "Isfahan, Iran",
     period: "Mar – Oct 2021",
     highlights: [
-      "Built and deployed a real-time car detection pipeline on server infrastructure.",
-      "Trained detection models for long-distance and aerial imagery using YOLO.",
+      "Fine-tuned YOLOv5 for long-distance UAV car detection and deployed a real-time tracking pipeline.",
+      "Trained detection models on long-distance and aerial imagery using YOLO.",
     ],
     tech: ["Python", "PyTorch", "YOLO", "OpenCV"],
   },
@@ -216,17 +216,9 @@ export const repositories: Repository[] = [
     summary:
       "Persian paraphrasing model built on mT5-small, with a co-authored 14-page Persian paper.",
     detail:
-      "Own work. Training and test notebooks plus a published paper written with Prof. Mahsa Soheil Shamaee. Built on ParaNMT (50M English–Persian pairs) and the Persian portion of mC4; received a stipend for the project.",
+      "Own work. Training and test notebooks plus a 14-page paper co-authored with Prof. Mahsa Soheil Shamaee. Built on ParaNMT (50M English–Persian pairs) and the Persian portion of mC4; received a stipend for the project.",
     href: "https://github.com/mahdiAsefi20/Persian-Paraphraser",
     files: ["train notebook", "test notebook", "Doc/PersianParaphraser.pdf"],
-  },
-  {
-    name: "Genetic & Particle Swarm Optimization",
-    language: "Python",
-    summary: "AI course project implementing genetic algorithms and particle swarm optimisation.",
-    detail:
-      "Own work. Evolutionary and swarm-based optimisation applied to complex search problems as part of the AI course curriculum.",
-    href: "https://github.com/mahdiAsefi20",
   },
 ];
 
@@ -257,7 +249,7 @@ export const skillGroups: SkillGroup[] = [
       "Multi-agent systems",
       "LLM evaluation & fine-tuning",
       "Langfuse",
-      "Redis conversational memory",
+      "Redis-backed conversational memory",
     ],
   },
   {
@@ -288,7 +280,7 @@ export const skillGroups: SkillGroup[] = [
       "VAE",
       "Diffusion models",
       "FFmpeg",
-      "Vast.ai",
+      "Vast.ai (on-demand cloud GPU)",
       "Image & video prompt engineering",
       "ElevenLabs (TTS / voice cloning)",
     ],
@@ -341,7 +333,7 @@ export const education: Education[] = [
     degree: "M.Sc. in Artificial Intelligence",
     school: "Azad University of Tehran Central Branch",
     location: "Tehran, Iran",
-    period: "2023 – Present",
+    period: "2023 – Present (Expected 2026)",
     gpa: "GPA 18.89 / 20",
     supervisors: "Supervisor: Prof. Reyhaneh Tati (Azad University) · Consulting Supervisor: Prof. Azadeh Mansouri (Kharazmi University)",
     highlight: "Thesis: Deepfake / face forgery detection — in progress",
@@ -381,7 +373,7 @@ export const research: ResearchItem[] = [
     period: "Jan – Mar 2023",
     supervisor: "Prof. Qian Liu",
     description:
-      "Studied GAN-based synthetic data generation for breast-cancer detection, investigating how MRI imagery and genomic information can be fused into a unified generation network.",
+      "Studied GAN-based synthetic data generation for breast cancer detection, investigating how MRI imagery and genomic information can be fused into a unified generation network.",
   },
   {
     title: "Authentication & Clustering People in News",

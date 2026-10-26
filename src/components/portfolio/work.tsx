@@ -16,7 +16,7 @@ export function Work() {
           <SectionHeading
             index="03"
             title="Open Source Work"
-            kicker="Inspectable, not described — read the code yourself"
+            kicker="Public repositories"
             icon={Github}
           />
         </Reveal>

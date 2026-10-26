@@ -27,9 +27,7 @@ export function Footer() {
             <p className="mono mt-4 max-w-xs text-xs leading-relaxed text-ink-3">
               {profile.positionLine}
             </p>
-            <p className="mt-4 max-w-xs text-sm leading-relaxed text-ink-2">
-              Building AI systems that survive contact with production.
-            </p>
+
           </div>
 
           {/* ── Sections ── */}

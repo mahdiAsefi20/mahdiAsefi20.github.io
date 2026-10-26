@@ -17,15 +17,14 @@ export function Position() {
           <SectionHeading
             index="01"
             title="Position"
-            kicker="One role, three domains — each one shipped"
+            kicker="Three domains of practice"
             icon={BrainCircuit}
           />
         </Reveal>
 
         <Reveal delay={80}>
           <p className="max-w-3xl text-xl leading-relaxed text-ink sm:text-2xl sm:leading-[1.45]">
-            Every system below is either running in production or written from scratch. Nothing here is
-            adapted from a tutorial, and every claim links to the code that backs it.
+            Systems and repositories, with links to the underlying code.
           </p>
         </Reveal>
 
@@ -49,7 +48,7 @@ export function Position() {
 
                   <div className="mt-6 border-t border-line pt-4">
                     <span className="mono text-2xs font-medium uppercase tracking-[0.16em] text-ink-3">
-                      Evidence
+                      Code
                     </span>
                     <p className="mono mt-2 text-xs leading-relaxed text-accent/85">{card.proof}</p>
                   </div>

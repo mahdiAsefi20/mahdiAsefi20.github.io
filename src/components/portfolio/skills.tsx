@@ -24,7 +24,7 @@ export function Skills() {
           <SectionHeading
             index="04"
             title="Skills & Stack"
-            kicker="Confirmed and interviewable — every item here can be discussed"
+            kicker="Technical skills"
             icon={Layers}
           />
         </Reveal>
